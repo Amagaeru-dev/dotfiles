@@ -1,0 +1,1 @@
+/home/amagaeru/dotfiles/.zshrc

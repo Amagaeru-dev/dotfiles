@@ -1,0 +1,132 @@
+# [[plugins]]
+# repo =  'lambdalisue/fern.vim'
+# hook_add = """
+# let g:fern#renderer = 'nerdfont'
+# " Ctrl+nでファイルツリーを表示/非表示する
+
+# " git操作
+# " g]で前の変更箇所へ移動する
+# nnoremap g[ :GitGutterPrevHunk<CR>
+# " g[で次の変更箇所へ移動する
+# nnoremap g] :GitGutterNextHunk<CR>
+# " ghでdiffをハイライトする
+# nnoremap gh :GitGutterLineHighlightsToggle<CR>
+# " gpでカーソル行のdiffを表示する
+# nnoremap gp :GitGutterPreviewHunk<CR>
+# " 記号の色を変更する
+# highlight GitGutterAdd ctermfg=green
+# highlight GitGutterChange ctermfg=blue
+# highlight GitGutterDelete ctermfg=red
+
+# " 反映時間を短くする(デフォルトは4000ms)
+
+# augroup my-glyph-palette
+#   autocmd! *
+#   autocmd FileType fern call glyph_palette#apply()
+#   autocmd FileType nerdtree,startify call glyph_palette#apply()
+# augroup END
+# set updatetime=250
+
+# """
+
+# [[plugins]]
+# repo = 'lambdalisue/fern-git-status.vim'
+
+# [[plugins]]
+# repo = 'lambdalisue/nerdfont.vim'
+
+# [[plugins]]
+# repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+
+# [[plugins]]
+# repo = 'lambdalisue/glyph-palette.vim'
+
+# [[plugins]]
+# repo = 'airblade/vim-gitgutter'
+
+# [[plugins]]
+# repo = 'ktr0731/tweet.nvim'
+
+[[plugins]]
+repo = 'kevinhwang91/rnvimr'
+
+[[plugins]]
+repo = 'mattn/benchvimrc-vim'
+
+[[plugins]]
+repo = 'miyakogi/seiya.vim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'khaveesh/vim-fish-syntax'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'flazz/vim-colorschemes'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+# merge = 0
+rev = "release"
+
+# [[plugins]]
+# repo =  'mfussenegger/nvim-dap'
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
+hook_add = '''
+ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+ let g:UltiSnipsExpandTrigger="<Down>"
+'''
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+
+[[plugins]]
+repo = 'MichaelMure/mdr'
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+
+[[plugins]]
+repo = 'kassio/neoterm'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = "puremourning/vimspector"
+on_ft = ["python", "javascript"]
+build = "./install_gadget.py --enable-python --force-enable-node"
+hook_add = """
+function! LaunchFileDebug()
+  call vimspector#LaunchWithSettings({'configuration': &filetype.'_file'})
+endfunction
+
+sign define vimspectorBP text=🔴 texthl=Normal
+sign define vimspectorBPDisabled text=🔵 texthl=Normal
+sign define vimspectorPC text=🔶 texthl=SpellBad
+
+"""
+
+[[plugins]]
+repo = 'mattn/mkdpreview-vim'
